@@ -1,0 +1,32 @@
+    <div class="field-container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div>
+                    <a href="" class="btn btn-primary control new" ng-click="newGameClick()">New Game</a>
+                    <a href="" class="btn btn-primary control restart" ng-click="resetGameClick()">Restart Game</a>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <table>
+                    <tr ng-repeat="row in gameData.fieldState">
+                        <td ng-repeat="cell in row" cell ng-click="cellClick(cell)" ng-class="{'highlight-win': gameData.winner == gameData.playerSide && cell.isHighlighted == true, 'highlight-lost': gameData.winner != gameData.playerSide && cell.isHighlighted == true}">
+                            <span ng-if="cell.isMarked && cell.figure == 'x'"><i class="fa fa-times fa-2x"></i></span>
+                            <span ng-if="cell.isMarked && cell.figure == 'o'"><i class="fa fa-circle-o fa-2x"></i></span>
+                            <span ng-if="!cell.isMarked"></span>
+                        </td>
+                    </tr>
+                </table>
+                <div class="gameInfo text-center">
+                    <p ng-if="!gameData.isGameEnd && !gameData.isBusy">Your turn
+                        (<i ng-if="gameData.playerSide == 'x'" class="fa fa-times"></i>
+                        <i ng-if="gameData.playerSide == 'o'" class="fa fa-circle-o"></i>)
+                    </p>
+                    <p ng-if="gameData.isGameEnd && gameData.winner != ''">
+                        Game finished
+                    </p>
+                    <p ng-if="gameData.isGameEnd && gameData.winner != 'x' && gameData.winner != 'o'">Draw game</p>
+                </div>
+            </div>
+        </div>
+    </div>

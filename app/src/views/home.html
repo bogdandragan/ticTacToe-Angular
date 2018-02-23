@@ -1,0 +1,30 @@
+    <div class="home-container">
+        <div class="panel panel-default">
+            <div class="panel-heading text-center"><h4>Tic Tac Toe Game</h4></div>
+            <div class="panel-body">
+                <form name="startGameForm" ng-submit="startGame()">
+                    <div>
+                        <label>Select your side</label>
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label><input type="radio" ng-model="gameData.playerSide" value="x"><i class="figureType fa fa-times fa-2x"></i></label>
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label><input type="radio" ng-model="gameData.playerSide" value="o"><i class="figureType fa fa-circle-o fa-2x"></i></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="fieldSize">Select field size</label>
+                        <select class="form-control" id="fieldSize" ng-model="gameData.fieldSize">
+                            <option value="3">3x3</option>
+                            <option value="4">4x4</option>
+                            <option value="5">5x5</option>
+                            <option value="6">6x6</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary startGameBtn">Start game</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+

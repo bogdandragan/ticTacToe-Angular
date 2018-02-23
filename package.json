@@ -1,0 +1,29 @@
+{
+  "name": "ticTacToe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-ui-router": "^0.4.2",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "css-loader": "^0.28.0",
+    "file-loader": "^0.10.1",
+    "ng-annotate-loader": "^0.2.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --hot --content-base app/"
+  },
+  "author": "",
+  "license": "ISC"
+}
